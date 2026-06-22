@@ -1,7 +1,8 @@
 // src/components/shop/HeroSection.tsx
 import Link from 'next/link'
 import Image from 'next/image'
-import { placeholderImage } from '@/lib/data/catalog'
+// Hero background — person in black hoodie (Unsplash, free to use)
+const HERO_IMG = 'https://images.unsplash.com/photo-1546863929-b9c543a2aec7?auto=format&fit=crop&w=1920&h=1080&q=80'
 
 export function HeroSection() {
   return (
@@ -9,7 +10,7 @@ export function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src={placeholderImage('DBB', 1920, 1080)}
+          src={HERO_IMG}
           alt="DBB Hero"
           fill
           priority

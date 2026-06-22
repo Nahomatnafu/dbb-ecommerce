@@ -2,7 +2,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Footer } from '@/components/layout/Footer'
-import { placeholderImage } from '@/lib/data/catalog'
+// Story hero — black hoodie on rack (Unsplash, free to use)
+const STORY_IMG = 'https://images.unsplash.com/photo-1612978322313-be209301e185?auto=format&fit=crop&w=1920&h=800&q=80'
 
 export const metadata = {
   title: 'Our Story — DBB',
@@ -16,7 +17,7 @@ export default function StoryPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden bg-dbb-black">
         <div className="absolute inset-0">
           <Image
-            src={placeholderImage('Our Story', 1920, 800)}
+            src={STORY_IMG}
             alt="Our Story"
             fill
             priority

@@ -6,6 +6,7 @@ const nextConfig = {
     // so skip the optimizer (which can't process data: URLs anyway).
     unoptimized: true,
     remotePatterns: [
+      { protocol: 'https', hostname: 'images.unsplash.com' },
       { protocol: 'https', hostname: 'placehold.co' },
       { protocol: 'https', hostname: '**.supabase.co' },
     ],
