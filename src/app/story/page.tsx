@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Footer } from '@/components/layout/Footer'
+import { placeholderImage } from '@/lib/data/catalog'
 
 export const metadata = {
   title: 'Our Story — DBB',
@@ -15,7 +16,7 @@ export default function StoryPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden bg-dbb-black">
         <div className="absolute inset-0">
           <Image
-            src="https://placehold.co/1920x800/111111/ffffff?text=Our+Story"
+            src={placeholderImage('Our Story', 1920, 800)}
             alt="Our Story"
             fill
             priority

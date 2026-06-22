@@ -1,6 +1,7 @@
 // src/components/shop/HeroSection.tsx
 import Link from 'next/link'
 import Image from 'next/image'
+import { placeholderImage } from '@/lib/data/catalog'
 
 export function HeroSection() {
   return (
@@ -8,7 +9,7 @@ export function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="https://placehold.co/1920x1080/111111/ffffff?text=DBB"
+          src={placeholderImage('DBB', 1920, 1080)}
           alt="DBB Hero"
           fill
           priority

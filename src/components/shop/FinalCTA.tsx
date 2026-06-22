@@ -1,13 +1,14 @@
 // src/components/shop/FinalCTA.tsx
 import Link from 'next/link'
 import Image from 'next/image'
+import { placeholderImage } from '@/lib/data/catalog'
 
 export function FinalCTA() {
   return (
     <section className="relative overflow-hidden bg-dbb-black py-32">
       <div className="absolute inset-0 opacity-20">
         <Image
-          src="https://placehold.co/1920x600/111111/ffffff?text=DBB"
+          src={placeholderImage('DBB', 1920, 600)}
           alt=""
           fill
           className="object-cover"

@@ -4,8 +4,14 @@
 
 import type { Product, CommunityPost, Category } from '@/types'
 
-const img = (text: string, w = 800, h = 1000) =>
-  `https://placehold.co/${w}x${h}/111111/ffffff?text=${encodeURIComponent(text)}`
+// Inline SVG data-URI placeholder — renders instantly, never 404s, no network.
+export const placeholderImage = (text: string, w = 800, h = 1000) => {
+  const fontSize = Math.round(Math.min(w, h) / 8)
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><rect width="100%" height="100%" fill="#111111"/><text x="50%" y="50%" font-family="Arial, sans-serif" font-size="${fontSize}" font-weight="bold" letter-spacing="2" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">${text}</text></svg>`
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`
+}
+
+const img = placeholderImage
 
 const sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL']
 
